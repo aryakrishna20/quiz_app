@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'quiz/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p>Total Questions Answered: {{ total_questions }}</p>
+        <p>Correct Answers: {{ correct_answers }}</p>
+        <p>Incorrect Answers: {{ incorrect_answers }}</p>
+        <a href="{% url 'start_quiz' %}">Start New Quiz</a>
+    </div>
+</body>
+</html>
